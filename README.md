@@ -3,7 +3,7 @@
 A multi-route asset handler for Shelf that serves Flutter bundled assets with flexible routing configuration, perfect for WebView integration.
 
 [![pub package](https://img.shields.io/pub/v/shelf_asset_router.svg)](https://pub.dev/packages/shelf_asset_router)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![License: BSD-3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
 ## Overview
 
@@ -26,9 +26,18 @@ A multi-route asset handler for Shelf that serves Flutter bundled assets with fl
 - **Documentation viewers** - Display HTML documentation within your app
 - **Chart libraries** - Integrate web-based charting solutions (TradingView, Chart.js, etc.)
 
-<!-- TODO: Add demo video/GIF here showing the example app in action -->
-<!-- Suggested content: Screen recording of the example app running on Android/iOS -->
-<!-- showing the web content loading in WebView with navigation between pages -->
+## Demo
+
+<table>
+  <tr>
+    <td align="center"><strong>Android</strong></td>
+    <td align="center"><strong>iOS</strong></td>
+  </tr>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/srcchang/shelf_asset_router/main/screenrecordings/shelf_asset_router_android.gif" alt="Android Demo" width="300"/></td>
+    <td><img src="https://raw.githubusercontent.com/srcchang/shelf_asset_router/main/screenrecordings/shelf_asset_router_ios.gif" alt="iOS Demo" width="300"/></td>
+  </tr>
+</table>
 
 ## Installation
 
@@ -206,10 +215,6 @@ flutter pub get
 flutter run
 ```
 
-<!-- TODO: Add screenshot here showing the example app UI -->
-<!-- Suggested content: Screenshot of the example app showing the WebView -->
-<!-- with the gradient background and interactive elements -->
-
 ## API Reference
 
 ### `AssetRoute`
@@ -385,7 +390,7 @@ cd example && flutter run
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the BSD 3-Clause License - see the [LICENSE](LICENSE) file for details.
 
 ## Changelog
 
