@@ -1,7 +1,8 @@
 name: shelf_asset_router
 description: "A multi-route asset handler for Shelf that serves Flutter bundled assets with flexible routing configuration, perfect for WebView integration."
 version: 0.0.1
-homepage:
+repository: https://github.com/srcchang/shelf_asset_router
+homepage: https://github.com/srcchang/shelf_asset_router
 
 environment:
   sdk: ^3.10.3
