@@ -34,8 +34,8 @@ A multi-route asset handler for Shelf that serves Flutter bundled assets with fl
     <td align="center"><strong>iOS</strong></td>
   </tr>
   <tr>
-    <td><img src="https://raw.githubusercontent.com/srcchang/shelf_asset_router/main/screenrecordings/shelf_asset_router_android.gif" alt="Android Demo" width="300"/></td>
-    <td><img src="https://raw.githubusercontent.com/srcchang/shelf_asset_router/main/screenrecordings/shelf_asset_router_ios.gif" alt="iOS Demo" width="300"/></td>
+    <td><img src="https://raw.githubusercontent.com/srcchang/shelf_asset_router/main/doc/shelf_asset_router_android.gif" alt="Android Demo" width="300"/></td>
+    <td><img src="https://raw.githubusercontent.com/srcchang/shelf_asset_router/main/doc/shelf_asset_router_ios.gif" alt="iOS Demo" width="300"/></td>
   </tr>
 </table>
 

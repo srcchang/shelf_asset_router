@@ -3,8 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:shelf/shelf.dart';
 import 'package:shelf/shelf_io.dart' as shelf_io;
-import 'package:shelf_asset_router/asset_handler.dart';
-import 'package:shelf_asset_router/asset_route.dart';
+import 'package:shelf_asset_router/shelf_asset_router.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 void main() {

@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:flutter/services.dart';
 import 'package:mime/mime.dart';
 import 'package:shelf/shelf.dart';
-import 'package:shelf_asset_router/asset_route.dart';
+import 'package:shelf_asset_router/shelf_asset_router.dart';
 
 /// Asset Handler utility class
 ///
@@ -32,10 +32,7 @@ class AssetHandler {
 
         return Response.ok(
           data.buffer.asUint8List(),
-          headers: {
-            'Cache-Control': 'public, max-age=3600',
-            'Content-Type': mimeType,
-          },
+          headers: {'Cache-Control': 'public, max-age=3600', 'Content-Type': mimeType},
         );
       } catch (e) {
         return Response.internalServerError(body: 'Error serving asset: ${request.url.path}');
