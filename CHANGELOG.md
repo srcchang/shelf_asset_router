@@ -1,3 +1,8 @@
+## 1.1.2
+
+*   **Improved SDK compatibility** - Lowered minimum Dart SDK requirement to `^3.0.0`
+*   Enables usage in projects with Dart SDK 3.0+
+
 ## 1.1.1
 
 *   Code formatting improvements with `dart format`
