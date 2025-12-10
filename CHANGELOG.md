@@ -1,3 +1,7 @@
+## 1.1.1
+
+*   Code formatting improvements with `dart format`
+
 ## 1.1.0
 
 *   **Improved package structure** - All imports now use single entry point: `package:shelf_asset_router/shelf_asset_router.dart`

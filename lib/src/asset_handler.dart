@@ -32,10 +32,15 @@ class AssetHandler {
 
         return Response.ok(
           data.buffer.asUint8List(),
-          headers: {'Cache-Control': 'public, max-age=3600', 'Content-Type': mimeType},
+          headers: {
+            'Cache-Control': 'public, max-age=3600',
+            'Content-Type': mimeType,
+          },
         );
       } catch (e) {
-        return Response.internalServerError(body: 'Error serving asset: ${request.url.path}');
+        return Response.internalServerError(
+          body: 'Error serving asset: ${request.url.path}',
+        );
       }
     };
   }
@@ -48,13 +53,17 @@ class AssetHandler {
   ///
   /// Returns null if no matching route is found
   static String? _resolvePath(String requestPath, List<AssetRoute> configs) {
-    var path = requestPath.startsWith('/') ? requestPath.substring(1) : requestPath;
+    var path = requestPath.startsWith('/')
+        ? requestPath.substring(1)
+        : requestPath;
 
     for (final config in configs) {
       final basePath = config.basePath;
 
       if (path.startsWith('$basePath/') || path == basePath) {
-        var relativePath = path == basePath ? '' : path.substring(basePath.length + 1);
+        var relativePath = path == basePath
+            ? ''
+            : path.substring(basePath.length + 1);
 
         if (relativePath.isEmpty || relativePath.endsWith('/')) {
           relativePath += config.defaultDocument ?? 'index.html';

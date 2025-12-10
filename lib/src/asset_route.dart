@@ -11,7 +11,11 @@
 /// ```
 /// Generates URL: `http://localhost:8080/docs/index.html`
 class AssetRoute {
-  const AssetRoute({required this.basePath, this.defaultDocument, this.listDirectories = false});
+  const AssetRoute({
+    required this.basePath,
+    this.defaultDocument,
+    this.listDirectories = false,
+  });
 
   /// Asset directory path (e.g. 'docs', 'static')
   final String basePath;

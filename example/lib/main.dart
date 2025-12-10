@@ -57,8 +57,9 @@ class _WebViewExampleState extends State<WebViewExample> {
       ]);
 
       // Create request handler pipeline with logging middleware
-      final handler =
-          const Pipeline().addMiddleware(logRequests()).addHandler(assetHandler);
+      final handler = const Pipeline()
+          .addMiddleware(logRequests())
+          .addHandler(assetHandler);
 
       // Start HTTP server on localhost with random available port
       _server = await shelf_io.serve(
@@ -151,16 +152,9 @@ class _WebViewExampleState extends State<WebViewExample> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(
-                Icons.error_outline,
-                size: 64,
-                color: Colors.red,
-              ),
+              const Icon(Icons.error_outline, size: 64, color: Colors.red),
               const SizedBox(height: 16),
-              Text(
-                'Error',
-                style: Theme.of(context).textTheme.headlineSmall,
-              ),
+              Text('Error', style: Theme.of(context).textTheme.headlineSmall),
               const SizedBox(height: 8),
               Text(
                 _errorMessage!,
@@ -195,9 +189,7 @@ class _WebViewExampleState extends State<WebViewExample> {
             ],
           ),
         ),
-        Expanded(
-          child: WebViewWidget(controller: _webViewController!),
-        ),
+        Expanded(child: WebViewWidget(controller: _webViewController!)),
       ],
     );
   }

@@ -7,7 +7,10 @@ void main() {
     test('returns 404 for non-matching route', () async {
       final handler = AssetHandler.create([const AssetRoute(basePath: 'docs')]);
 
-      final request = Request('GET', Uri.parse('http://localhost/other/file.html'));
+      final request = Request(
+        'GET',
+        Uri.parse('http://localhost/other/file.html'),
+      );
       final response = await handler(request);
 
       expect(response.statusCode, equals(404));
@@ -18,7 +21,10 @@ void main() {
     test('returns 404 for non-existent asset in valid route', () async {
       final handler = AssetHandler.create([const AssetRoute(basePath: 'docs')]);
 
-      final request = Request('GET', Uri.parse('http://localhost/docs/missing.html'));
+      final request = Request(
+        'GET',
+        Uri.parse('http://localhost/docs/missing.html'),
+      );
       final response = await handler(request);
 
       expect(response.statusCode, equals(404));
@@ -29,7 +35,10 @@ void main() {
     test('handles empty route list gracefully', () async {
       final handler = AssetHandler.create([]);
 
-      final request = Request('GET', Uri.parse('http://localhost/docs/page.html'));
+      final request = Request(
+        'GET',
+        Uri.parse('http://localhost/docs/page.html'),
+      );
       final response = await handler(request);
 
       expect(response.statusCode, equals(404));
@@ -47,17 +56,26 @@ void main() {
       ]);
 
       // All should return 404 (asset not found) not "route not found"
-      final docsRequest = Request('GET', Uri.parse('http://localhost/docs/test.html'));
+      final docsRequest = Request(
+        'GET',
+        Uri.parse('http://localhost/docs/test.html'),
+      );
       final docsResponse = await handler(docsRequest);
       expect(docsResponse.statusCode, equals(404));
       expect(await docsResponse.readAsString(), contains('Asset not found'));
 
-      final staticRequest = Request('GET', Uri.parse('http://localhost/static/test.js'));
+      final staticRequest = Request(
+        'GET',
+        Uri.parse('http://localhost/static/test.js'),
+      );
       final staticResponse = await handler(staticRequest);
       expect(staticResponse.statusCode, equals(404));
       expect(await staticResponse.readAsString(), contains('Asset not found'));
 
-      final assetsRequest = Request('GET', Uri.parse('http://localhost/assets/test.png'));
+      final assetsRequest = Request(
+        'GET',
+        Uri.parse('http://localhost/assets/test.png'),
+      );
       final assetsResponse = await handler(assetsRequest);
       expect(assetsResponse.statusCode, equals(404));
       expect(await assetsResponse.readAsString(), contains('Asset not found'));
@@ -107,7 +125,10 @@ void main() {
     test('handles nested paths', () async {
       final handler = AssetHandler.create([const AssetRoute(basePath: 'docs')]);
 
-      final request = Request('GET', Uri.parse('http://localhost/docs/guides/intro.html'));
+      final request = Request(
+        'GET',
+        Uri.parse('http://localhost/docs/guides/intro.html'),
+      );
       final response = await handler(request);
 
       // Should resolve to docs/guides/intro.html (which doesn't exist, so 404)
@@ -119,7 +140,10 @@ void main() {
     test('does not match partial base paths', () async {
       final handler = AssetHandler.create([const AssetRoute(basePath: 'docs')]);
 
-      final request = Request('GET', Uri.parse('http://localhost/documentation/file.html'));
+      final request = Request(
+        'GET',
+        Uri.parse('http://localhost/documentation/file.html'),
+      );
       final response = await handler(request);
 
       // Should not match "docs" base path
@@ -131,7 +155,9 @@ void main() {
 
   group('Custom Default Document', () {
     test('uses custom defaultDocument for directory requests', () async {
-      final handler = AssetHandler.create([const AssetRoute(basePath: 'docs', defaultDocument: 'home.html')]);
+      final handler = AssetHandler.create([
+        const AssetRoute(basePath: 'docs', defaultDocument: 'home.html'),
+      ]);
 
       final request = Request('GET', Uri.parse('http://localhost/docs/'));
       final response = await handler(request);

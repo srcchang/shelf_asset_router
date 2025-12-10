@@ -23,10 +23,7 @@ void main() {
     });
 
     test('creates route with listDirectories enabled', () {
-      const route = AssetRoute(
-        basePath: 'files',
-        listDirectories: true,
-      );
+      const route = AssetRoute(basePath: 'files', listDirectories: true);
 
       expect(route.basePath, equals('files'));
       expect(route.defaultDocument, isNull);
