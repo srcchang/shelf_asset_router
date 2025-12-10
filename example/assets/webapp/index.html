@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelf Asset Router Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Shelf Asset Router</h1>
+            <p class="subtitle">Serving Flutter assets via Shelf HTTP server</p>
+        </header>
+
+        <main>
+            <section class="card">
+                <h2>Welcome!</h2>
+                <p>This web page is served from Flutter assets using <code>shelf_asset_router</code>.</p>
+                <p>The package allows you to serve bundled web content through a local HTTP server, perfect for WebView integration.</p>
+            </section>
+
+            <section class="card">
+                <h3>Features</h3>
+                <ul>
+                    <li>✅ Multi-route asset serving</li>
+                    <li>✅ Automatic MIME type detection</li>
+                    <li>✅ Custom default documents</li>
+                    <li>✅ Flexible path resolution</li>
+                </ul>
+            </section>
+
+            <section class="card interactive">
+                <h3>Interactive Demo</h3>
+                <p>Click the button to test JavaScript interaction:</p>
+                <button id="demo-btn" onclick="handleClick()">Click Me!</button>
+                <p id="click-count">Clicks: 0</p>
+            </section>
+
+            <section class="card">
+                <h3>Navigation</h3>
+                <p>Try these links to test routing:</p>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home (index.html)</a></li>
+                    <li><a href="about.html">About Page</a></li>
+                    <li><a href="./">Directory (uses defaultDocument)</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>Powered by <strong>shelf_asset_router</strong></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Shelf Asset Router</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📖 About</h1>
+            <p class="subtitle">Learn more about shelf_asset_router</p>
+        </header>
+
+        <main>
+            <section class="card">
+                <h2>What is shelf_asset_router?</h2>
+                <p><code>shelf_asset_router</code> is a Flutter package that provides multi-route asset handling for Shelf HTTP servers.</p>
+                <p>It allows you to serve static files from Flutter's bundled assets, making it perfect for integrating web content into native Flutter applications via WebView.</p>
+            </section>
+
+            <section class="card">
+                <h3>How It Works</h3>
+                <ol>
+                    <li>Configure routes with <code>AssetRoute</code></li>
+                    <li>Create a handler with <code>AssetHandler.create()</code></li>
+                    <li>Start a Shelf server on localhost</li>
+                    <li>Load the content in a WebView</li>
+                </ol>
+            </section>
+
+            <section class="card">
+                <h3>Example Code</h3>
+                <pre><code>final handler = AssetHandler.create([
+  AssetRoute(
+    basePath: 'webapp',
+    defaultDocument: 'index.html',
+  ),
+]);
+
+final server = await shelf_io.serve(
+  handler,
+  'localhost',
+  8080,
+);</code></pre>
+            </section>
+
+            <section class="card">
+                <h3>Navigation</h3>
+                <p><a href="index.html">← Back to Home</a></p>
+            </section>
+        </main>
+
+        <footer>
+            <p>Powered by <strong>shelf_asset_router</strong></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
