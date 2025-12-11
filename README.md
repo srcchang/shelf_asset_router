@@ -24,7 +24,7 @@ A multi-route asset handler for Shelf that serves Flutter bundled assets with fl
 - **Hybrid apps** - Bridge native Flutter UI with web-based content
 - **Offline-first PWAs** - Deliver web content without network dependencies
 - **Documentation viewers** - Display HTML documentation within your app
-- **Chart libraries** - Integrate web-based charting solutions (TradingView, Chart.js, etc.)
+- **Chart libraries** - Integrate web-based charting solutions
 
 ## Demo
 
